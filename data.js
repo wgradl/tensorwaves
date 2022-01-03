@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1641200888647,
+  "lastUpdate": 1641224606093,
   "repoUrl": "https://github.com/ComPWA/tensorwaves",
   "entries": {
     "TensorWaves benchmark results": [
@@ -2364,6 +2364,142 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0011736790681531842",
             "extra": "mean: 588.3510688000058 msec\nrounds: 5"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "redeboer@gmx.com",
+            "name": "Remco de Boer",
+            "username": "redeboer"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "bc065b7edc6446dd6ec30382c66ff9144b08ee42",
+          "message": "refactor!: generalize data generation interface (#392)\n\n* chore: allow importing data classes from main sub-module\r\n* chore: collect RNGs under data.rng module\r\n* chore: increase default bunch size to 50,000\r\n* chore: isolate data sample handling functions\r\n* docs: add docstring to TFPhaseSpaceGenerator.generate\r\n* docs: add note about how to use amplitude analysis examples\r\n* docs: fix y-tick labels in fit animation\r\n* docs: use general data generators in notebooks\r\n* docs: write \"for a Function\" instead of \"with a Function\"\r\n* feat: define generate DataGenerator interface\r\n* feat: implement IdentityTransformer\r\n* feat: implement IntensityDistributionGenerator\r\n* feat: implement NumpyDomainGenerator\r\n* feat: implement NumpyUniformRNG\r\n* feat: implemented unweighted TFPhaseSpaceGenerator\r\n* fix: import NumpyUniformRNG from data.rng\r\n* fix: remove __all__ statement from data module\r\n* fix: use type function instead of __class__\r\n* refactor!: remove generate_phsp and generate_data facade functions\r\n* refactor: allow IntensityDistributionGenerator with WeightedDataGenerator\r\n* refactor: merge PhaseSpaceGenerator.setup() into its constructor\r\n* refactor: rename PhaseSpaceGenerator to WeightedDataGenerator\r\n* refactor: rename UniformRealNumberGenerator to RealNumberGenerator\r\n* style: use pytest.approx instead of numpy testing\r\n* test: merge test_generate with test_data",
+          "timestamp": "2022-01-03T16:39:31+01:00",
+          "tree_id": "44afd31f240b8c85aadd13d394378d48cbe026bf",
+          "url": "https://github.com/ComPWA/tensorwaves/commit/bc065b7edc6446dd6ec30382c66ff9144b08ee42"
+        },
+        "date": 1641224605288,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "benchmarks/ampform.py::TestJPsiToGammaPiPi::test_data[10000-jax]",
+            "value": 0.20628077783853196,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 4.847761437000003 sec\nrounds: 1"
+          },
+          {
+            "name": "benchmarks/ampform.py::TestJPsiToGammaPiPi::test_data[10000-numpy]",
+            "value": 0.24944386913431066,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 4.008917932000003 sec\nrounds: 1"
+          },
+          {
+            "name": "benchmarks/ampform.py::TestJPsiToGammaPiPi::test_data[10000-tf]",
+            "value": 0.1884336168726118,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 5.306908696000022 sec\nrounds: 1"
+          },
+          {
+            "name": "benchmarks/ampform.py::TestJPsiToGammaPiPi::test_fit[10000-jax]",
+            "value": 0.4079555967584342,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 2.4512471650000123 sec\nrounds: 1"
+          },
+          {
+            "name": "benchmarks/expression.py::test_data[3000-jax]",
+            "value": 18.9532625664961,
+            "unit": "iter/sec",
+            "range": "stddev: 0.001459887435083148",
+            "extra": "mean: 52.76136477778297 msec\nrounds: 9"
+          },
+          {
+            "name": "benchmarks/expression.py::test_data[3000-numpy]",
+            "value": 132.2003873814389,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0004362692063189447",
+            "extra": "mean: 7.564274355071982 msec\nrounds: 138"
+          },
+          {
+            "name": "benchmarks/expression.py::test_data[3000-numba]",
+            "value": 4.529585706072487,
+            "unit": "iter/sec",
+            "range": "stddev: 0.007249619643608007",
+            "extra": "mean: 220.770742600007 msec\nrounds: 5"
+          },
+          {
+            "name": "benchmarks/expression.py::test_data[3000-tf]",
+            "value": 73.96178994517878,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0006130230227905951",
+            "extra": "mean: 13.520494849316249 msec\nrounds: 73"
+          },
+          {
+            "name": "benchmarks/expression.py::test_fit[1000-Minuit2-jax]",
+            "value": 5.704010587839074,
+            "unit": "iter/sec",
+            "range": "stddev: 0.008003007365857224",
+            "extra": "mean: 175.31524260000424 msec\nrounds: 5"
+          },
+          {
+            "name": "benchmarks/expression.py::test_fit[1000-Minuit2-numpy]",
+            "value": 6.6353676563894295,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0019970164543084965",
+            "extra": "mean: 150.70754957143404 msec\nrounds: 7"
+          },
+          {
+            "name": "benchmarks/expression.py::test_fit[1000-Minuit2-numba]",
+            "value": 6.681418564352058,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0023795731859704975",
+            "extra": "mean: 149.66881514284782 msec\nrounds: 7"
+          },
+          {
+            "name": "benchmarks/expression.py::test_fit[1000-Minuit2-tf]",
+            "value": 0.9810913071516786,
+            "unit": "iter/sec",
+            "range": "stddev: 0.004631752976182806",
+            "extra": "mean: 1.0192731224000113 sec\nrounds: 5"
+          },
+          {
+            "name": "benchmarks/expression.py::test_fit[1000-ScipyMinimizer-jax]",
+            "value": 5.330295803859581,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0013598130347582005",
+            "extra": "mean: 187.6068489999966 msec\nrounds: 5"
+          },
+          {
+            "name": "benchmarks/expression.py::test_fit[1000-ScipyMinimizer-numpy]",
+            "value": 6.872682174436909,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0009602194095072819",
+            "extra": "mean: 145.50360028571114 msec\nrounds: 7"
+          },
+          {
+            "name": "benchmarks/expression.py::test_fit[1000-ScipyMinimizer-numba]",
+            "value": 6.768946276517929,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0014806991604197606",
+            "extra": "mean: 147.73348157143573 msec\nrounds: 7"
+          },
+          {
+            "name": "benchmarks/expression.py::test_fit[1000-ScipyMinimizer-tf]",
+            "value": 1.1406010376545892,
+            "unit": "iter/sec",
+            "range": "stddev: 0.006862024807591124",
+            "extra": "mean: 876.730747199997 msec\nrounds: 5"
           }
         ]
       }
